@@ -1,0 +1,9 @@
+{
+    "BOT_TOKEN": "",
+    "BOT_USERNAME": "",
+    "QIWI_SECRET_KEY": "",
+    "MAX_AMOUNT": 25,
+    "MIN_COMMENT_LENGTH": 10,
+    "MAX_COMMENT_LENGTH": 200,
+    "CHAT_ID": ""
+}
