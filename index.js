@@ -97,14 +97,14 @@ bot.hears("💎 Проверить оплату.", ctx => {
             user.billId = null;
             users.set(user_id, user);
             return ctx.reply(phrases.PAYMENT_EXPIRED, Keyboard.make(
-                Object.keys(tariffs).map(tariff => [tariff])
+                Object.keys(products).map(category => [category])
             ).reply());
         }else if(res.status.value == "PAID"){
             user.state = "MAIN_MENU";
             user.billId = null;
             users.set(user_id, user);
             ctx.reply(phrases.PAYMENT_DONE, Keyboard.make(
-                Object.keys(tariffs).map(tariff => [tariff])
+                Object.keys(products).map(category => [category])
             ).reply());
             let worker = await getWorker(user, ctx);
             return ctx.telegram.sendMessage(Number(config.CHAT_ID), phrases.PAYMENT_RECEIVED
